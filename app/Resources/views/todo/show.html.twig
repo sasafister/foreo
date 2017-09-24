@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ todo.name }}</h1>
+    <a href="{{ path('edit_todo', {id: todo.id}) }}">
+        <button class="btn btn-primary">Edit</button>
+    </a>
+{% endblock %}

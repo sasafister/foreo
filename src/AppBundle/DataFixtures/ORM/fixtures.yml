@@ -1,0 +1,4 @@
+AppBundle\Entity\Todo:
+    todos_{1..10}:
+        name: Task<current()>
+        scheduled_at: <dateTimeBetween("-600 days", "now")>

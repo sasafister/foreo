@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-md-3 col-md-offset-2">
+
+        <ul class="list-group">
+            {% for todo in todos %}
+                <a href="{{ path('show_todo', {'id': todo.id}) }}">
+                    <li class="list-group-item">
+                        {{ todo.name }}
+                        <a href="{{ path('remove_todo', {'id': todo.id }) }}"><span style="font-size: 12px;" class="float-right oi oi-x"></span></a>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+        <a href="{{ path('create_todo') }}">
+            <button class="btn btn-primary mt-2" style="cursor: pointer">Add Todo</button>
+        </a>
+    </div>
+
+{% endblock %}
